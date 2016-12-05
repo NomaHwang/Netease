@@ -1,0 +1,41 @@
+1. 基本数据类型
+java中的基本数据类型的占用的字节数固定，和机器无关，没有sizeof运算符。
+整数：
+byte: 1 byte
+short: 2 byte
+int: 4 byte
+long: 8 bytes
+没有无符号数unsigned
+占的字节数与机器无关，没有无符号数unsigned
+浮点数：
+float: 4 bytes
+double: 8 bytes
+字符：
+char: unicode, 2Bytes来表示
+布尔：
+boolen: 1bit
+字符串:
+String是不可变字符串，String对象和基本类型一样，一般情况下作为参数传递，在方法内改变了值，而原对象是不会被改变的。
+
+2. 输入输出
+输入：
+import java.util.Scanner
+Scanner scn = new Scanner(System.in);
+int age = scn.getInt();
+输出：
+System.out.printf("%s, age:%d\n", name, age);
+文件输入输出：
+打开文件：
+
+Scanner in = new Scanner(Path.get("C:\test.txt"),"UTF-8")
+while(in.hasnext()){
+     String s = in.next();
+}
+
+创建文件并写入：
+
+                           PrintWriter f = new PrintWriter("C:\\Users\\noma\\Downloads\\test.txt");
+                           String name = "noam";
+                           f.printf("Hello,%s",name);
+                           f.flush();
+                           f.close();
