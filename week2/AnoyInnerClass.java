@@ -8,19 +8,24 @@ import javax.swing.Timer;
 
 
 
-public class AnoyInnerClass implements ActionListener{
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		Date now = new Date();
-		System.out.println("now the time is: " + now);
-		Toolkit.getDefaultToolkit().beep();
-	}
-	
+public class AnnoyInnerTest{	
 	public static void main(String[] args){
-		AnoyInnerClass  tp = new AnoyInnerClass ();
-		Timer t = new Timer(2000, tp);
+		final boolean beep = true;
+		
+		ActionListener listener = new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Date now = new Date();
+				System.out.println("the current time is: " + now);
+				if(beep){
+					Toolkit.getDefaultToolkit().beep();
+				}
+			}
+		};
+		
+		Timer t = new Timer(2000, listener);
 		t.start();
 		
 		JOptionPane.showMessageDialog(null, "Quit?");
