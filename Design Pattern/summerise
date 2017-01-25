@@ -1,0 +1,12 @@
+面向对象系统设计和实现的两大目标是：高内聚、低耦合。
+设计模式的分类
+可以分为创建型模式、结构型模式、行为模式三大类。
+创建型模式：
+创建对象时，不是由客户端来实例化对象，而是由程序来确定创建对象的方式。
+主要包括：简单工厂、工厂方法(Factory)、抽象工程模式(Abstract Factory)、单例模式(Singleton)、建造者模式（Builder）和原型模式（Prototype）。
+结构型模式：
+用于帮助将多个对象组织成更大的结构。
+主要包括：适配器模式（adapter）、桥接模式（bridge）、组合模式（Component）、装饰器模式（Decorator）、外观模式（Facade）、享元模式（Flyweight）、代理模式（Proxy）。
+行为模式：
+用于帮助系统间各对象的通信以及控制复杂系统中的流程。
+主要包括：命令模式（Command）、解释器模式（Interpreter）、迭代器模式（Iterator）、中介者模式（Mediator）、备忘录模式（Memento）、观察者模式（Observer）、状态模式（State）、策略模式（strategy）、模板模式（Template）和访问者模式（Visitor）。
